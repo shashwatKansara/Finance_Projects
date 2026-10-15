@@ -9,5 +9,6 @@ for i in tickers:
     averages.append(data1[data1["Name"]==i]["close"].mean())
 
 plt.bar(tickers, averages)
-plt.title("Average Stock Prices, 2013-2018")
+plt.title("Average Closing Stock Prices, 2013-2018")
 plt.show()
+
