@@ -8,7 +8,7 @@ plt.plot(nvda["date"], nvda["close"])
 plt.plot(nvda["date"], nvda["high"])
 plt.plot(nvda["date"], nvda["low"])
 
-# Return calculation
+# Returns and Drawdown calculations
 returns = nvda["close"].pct_change() * 100
 drawdown = (nvda["close"] / nvda["close"].cummax()-1) * 100
 # drawdown means how much a stock has fallen from its highest price so far
@@ -16,7 +16,7 @@ drawdown = (nvda["close"] / nvda["close"].cummax()-1) * 100
 
 # Generating 4 different graphs within one panel
 
-plt.figure(figsize=(14,9)) # essential for the window size
+plt.figure(figsize=(14,9)) # Essential for the window size
 
 plt.subplot(2,2,1)
 plt.plot(nvda["date"], nvda["close"], label="Close")
